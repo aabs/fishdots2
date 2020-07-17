@@ -1,10 +1,9 @@
-set -x myplugin_prefix "hello world: "
+#!/usr/bin/env fish
 
-bind \cg "vi ~/.config/fish/config.fish"
+set -q fd2_log_level || fd2_log_level 2
 
-set -l name (basename (status -f) .fish){_uninstall}
+__fd2_runifexists $HOME/pre-local.fish
+__fd2_runifexists $HOME/(hostname).pre-local.fish
 
-function $name --on-event $name
-    bind --erase \cg
-end
-
+__fd2_runifexists $HOME/post-local.fish
+__fd2_runifexists $HOME/(hostname).post-local.fish
