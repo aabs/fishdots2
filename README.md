@@ -1,6 +1,31 @@
-# FishDots 2
+<h1 align="center">Welcome to fishdots2 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-1.2.3-blue.svg?cacheSeconds=2592000" />
+    <a href="https://twitter.com/aabs" target="_blank">
+          <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/aabs?label=Follow&style=social">
+  </a>
+</p>
 
-A ground-up rewrite of the Fishdots framework.
+> A ground-up rewrite of the Fishdots framework.
+
+## Install
+
+```sh
+fisher add aabs/fishdots2
+```
+
+## Author
+
+👤 **Andrew Matthews**
+
+* Website: aabs.github.io
+* Twitter: [@aabs](https://twitter.com/aabs)
+* Github: [@aabs](https://github.com/aabs)
+* LinkedIn: [@andrewmatthews](https://linkedin.com/in/andrewmatthews)
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
 
 ## Rationale
 
@@ -29,3 +54,4 @@ between plugins is warranted.
    makes functions that take multiple string arguments that contain spaces quite
    difficult.
 <!--  vim: set ts=2 sw=2 tw=80 et foldmethod=syntax foldlevelstart=20 : -->
+
