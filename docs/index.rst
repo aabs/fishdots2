@@ -82,22 +82,49 @@ Welcome to Fishdots2's documentation!
 
    nice file selector. Finds the file under `root_path` matching the `pattern`.  Presents the files in a `fzf` selector.  The file selected is stored in `$fd2_selected_item`.
 
-.. function:: __fd2_select_from_find    
+.. function:: __fd2_select_from_find(root_path, pattern)    
+
+   nice file selector. Finds the file under `root_path` matching the `pattern`.  Presents the files in a `fzf` selector.  The file selected is stored in `$fd2_selected_item`.
+
 .. function:: __fd2_select_from_search  
-.. function:: __fd2_select_item         
-.. function:: __fd2_to_slug             
+
+   nice file selector. Searches for the file (by contents) under `root_path` matching the `pattern`.  Presents the files in a `fzf` selector.  The file selected is stored in `$fd2_selected_item`.
+
+.. function:: __fd2_select_item(list_of_items)   
+
+   nice item selector.  Presents a list of items in a `fzf` selector.  The file selected is stored in `$fd2_selected_item`.
+
+.. function:: __fd2_to_slug(string)
+
+   converts the string into a format compatible with URLs and file names
+
 .. function:: __fd2_trace(message)
 
    Logging command (logging level -1)
 
 .. function:: __fd2_warn
+
+   Logging command (logging level 2)
+
 .. function:: debug               
-.. function:: error               
-.. function:: info
-.. function:: log
-.. function:: trace(message)
 
    Logging command (logging level 0)
+
+.. function:: error               
+
+   Logging command (logging level 3)
+
+.. function:: info
+
+   Logging command (logging level 1)
+
+.. function:: log
+
+   Logging command (not using log level)
+
+.. function:: trace(message)
+
+   Logging command (logging level -1)
 
 .. function:: warn(message)
 
