@@ -64,10 +64,24 @@ Welcome to Fishdots2's documentation!
 
    Takes one argument - message - and displays it with `[BOOT]` prepended to it in bright green.
 
-.. function:: __fd2_runifexists  
+.. function:: __fd2_runifexists(path_of_file)
+
+   check if the file exists, and sources it if possible
+
 .. function:: __fd2_running      
-.. function:: __fd2_search       
-.. function:: __fd2_select_file  
+
+   Logging command for boot loading messages
+
+   Takes one argument - message - and displays it with `    => ` prepended to it in cyan.
+
+.. function:: __fd2_search(root_path, pattern)
+
+   find file by full text search. Depends on ripgrep
+
+.. function:: __fd2_select_file(root_path, pattern)
+
+   nice file selector. Finds the file under `root_path` matching the `pattern`.  Presents the files in a `fzf` selector.  The file selected is stored in `$fd2_selected_item`.
+
 .. function:: __fd2_select_from_find    
 .. function:: __fd2_select_from_search  
 .. function:: __fd2_select_item         
