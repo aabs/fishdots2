@@ -12,124 +12,125 @@ Welcome to Fishdots2's documentation!
 
    Functions
 
-.. function:: __fd2_action(message)
+   .. function:: debug               
 
-   Takes one argument - message - and displays it with `[action]` prepended to it in yellow.
+      Logging command (logging level 0)
 
-.. function:: __fd2_boot(message)
+   .. function:: error               
 
-   Logging command for boot loading messages
+      Logging command (logging level 3)
 
-   Takes one argument - message - and displays it with `[BOOT]` prepended to it in bright yellow.
+   .. function:: info
 
-.. function:: __fd2_colour_print(colour, message)  
+      Logging command (logging level 1)
+
+   .. function:: log
+
+      Logging command (not using log level)
+
+   .. function:: trace(message)
+
+      Logging command (logging level -1)
+
+   .. function:: warn(message)
+
+      Logging command (logging level 0)
    
-   displays the message in the colour requested
 
-.. function:: __fd2_debug(message)
 
-   Logging command (logging level 0)
+   .. function:: __fd2_action(message)
 
-.. function:: __fd2_echo(message)
+      Takes one argument - message - and displays it with `[action]` prepended to it in yellow.
 
-   just echo if we are allowed to. Suppress echo messages by setting `$fd2_suppress_logging` to any value
+   .. function:: __fd2_boot(message)
 
-.. function:: __fd2_enter(message)
+      Logging command for boot loading messages
 
-   Logging command (logging level 3)
-   
-.. function:: __fd2_error(message)
+      Takes one argument - message - and displays it with `[BOOT]` prepended to it in bright yellow.
 
-   Logging command (logging level 3)
+   .. function:: __fd2_colour_print(colour, message)  
+      
+      displays the message in the colour requested
 
-.. function:: __fd2_find(root_path, pattern) 
+   .. function:: __fd2_debug(message)
 
-   find item by name at location in `root_path`
+      Logging command (logging level 0)
 
-.. function:: __fd2_info(message)
+   .. function:: __fd2_echo(message)
 
-   Logging command (logging level 1)
+      just echo if we are allowed to. Suppress echo messages by setting `$fd2_suppress_logging` to any value
 
-.. function:: __fd2_leave
+   .. function:: __fd2_enter(message)
 
-   leaves current folder and emits event `fd2_left_folder`
+      Logging command (logging level 3)
+      
+   .. function:: __fd2_error(message)
 
-.. function:: __fd2_log_level(level)
+      Logging command (logging level 3)
 
-   sets the logging level to a numerical value.  This value is honoured by most other logging Functions
+   .. function:: __fd2_find(root_path, pattern) 
 
-.. function:: __fd2_ok(message)        
+      find item by name at location in `root_path`
 
-   Logging command for boot loading messages
+   .. function:: __fd2_info(message)
 
-   Takes one argument - message - and displays it with `[BOOT]` prepended to it in bright green.
+      Logging command (logging level 1)
 
-.. function:: __fd2_runifexists(path_of_file)
+   .. function:: __fd2_leave
 
-   check if the file exists, and sources it if possible
+      leaves current folder and emits event `fd2_left_folder`
 
-.. function:: __fd2_running      
+   .. function:: __fd2_log_level(level)
 
-   Logging command for boot loading messages
+      sets the logging level to a numerical value.  This value is honoured by most other logging Functions
 
-   Takes one argument - message - and displays it with `    => ` prepended to it in cyan.
+   .. function:: __fd2_ok(message)        
 
-.. function:: __fd2_search(root_path, pattern)
+      Logging command for boot loading messages
 
-   find file by full text search. Depends on ripgrep
+      Takes one argument - message - and displays it with `[BOOT]` prepended to it in bright green.
 
-.. function:: __fd2_select_file(root_path, pattern)
+   .. function:: __fd2_runifexists(path_of_file)
 
-   nice file selector. Finds the file under `root_path` matching the `pattern`.  Presents the files in a `fzf` selector.  The file selected is stored in `$fd2_selected_item`.
+      check if the file exists, and sources it if possible
 
-.. function:: __fd2_select_from_find(root_path, pattern)    
+   .. function:: __fd2_running      
 
-   nice file selector. Finds the file under `root_path` matching the `pattern`.  Presents the files in a `fzf` selector.  The file selected is stored in `$fd2_selected_item`.
+      Logging command for boot loading messages
 
-.. function:: __fd2_select_from_search  
+      Takes one argument - message - and displays it with `    => ` prepended to it in cyan.
 
-   nice file selector. Searches for the file (by contents) under `root_path` matching the `pattern`.  Presents the files in a `fzf` selector.  The file selected is stored in `$fd2_selected_item`.
+   .. function:: __fd2_search(root_path, pattern)
 
-.. function:: __fd2_select_item(list_of_items)   
+      find file by full text search. Depends on ripgrep
 
-   nice item selector.  Presents a list of items in a `fzf` selector.  The file selected is stored in `$fd2_selected_item`.
+   .. function:: __fd2_select_file(root_path, pattern)
 
-.. function:: __fd2_to_slug(string)
+      nice file selector. Finds the file under `root_path` matching the `pattern`.  Presents the files in a `fzf` selector.  The file selected is stored in `$fd2_selected_item`.
 
-   converts the string into a format compatible with URLs and file names
+   .. function:: __fd2_select_from_find(root_path, pattern)    
 
-.. function:: __fd2_trace(message)
+      nice file selector. Finds the file under `root_path` matching the `pattern`.  Presents the files in a `fzf` selector.  The file selected is stored in `$fd2_selected_item`.
 
-   Logging command (logging level -1)
+   .. function:: __fd2_select_from_search  
 
-.. function:: __fd2_warn
+      nice file selector. Searches for the file (by contents) under `root_path` matching the `pattern`.  Presents the files in a `fzf` selector.  The file selected is stored in `$fd2_selected_item`.
 
-   Logging command (logging level 2)
+   .. function:: __fd2_select_item(list_of_items)   
 
-.. function:: debug               
+      nice item selector.  Presents a list of items in a `fzf` selector.  The file selected is stored in `$fd2_selected_item`.
 
-   Logging command (logging level 0)
+   .. function:: __fd2_to_slug(string)
 
-.. function:: error               
+      converts the string into a format compatible with URLs and file names
 
-   Logging command (logging level 3)
+   .. function:: __fd2_trace(message)
 
-.. function:: info
+      Logging command (logging level -1)
 
-   Logging command (logging level 1)
+   .. function:: __fd2_warn
 
-.. function:: log
-
-   Logging command (not using log level)
-
-.. function:: trace(message)
-
-   Logging command (logging level -1)
-
-.. function:: warn(message)
-
-   Logging command (logging level 0)
-  
+      Logging command (logging level 2)
 
 
 Indices and tables
