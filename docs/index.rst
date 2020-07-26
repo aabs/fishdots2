@@ -10,8 +10,7 @@ Welcome to Fishdots2's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   api
-   functions
+   Functions
 
 .. function:: __fd2_action
 
@@ -26,7 +25,7 @@ Welcome to Fishdots2's documentation!
 .. function:: __fd2_colour_print  
    
    displays the message in the colour requested
-   
+
 .. function:: __fd2_debug         
 .. function:: __fd2_echo   
 .. function:: __fd2_enter  
