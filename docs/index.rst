@@ -12,21 +12,24 @@ Welcome to Fishdots2's documentation!
 
    Functions
 
-.. function:: __fd2_action
+.. function:: __fd2_action(message)
 
    Takes one argument - message - and displays it with `[action]` prepended to it in yellow.
 
-.. function:: __fd2_boot  
+.. function:: __fd2_boot(message)
 
    Logging command for boot loading messages
 
    Takes one argument - message - and displays it with `[BOOT]` prepended to it in bright yellow.
 
-.. function:: __fd2_colour_print  
+.. function:: __fd2_colour_print(colour, message)  
    
    displays the message in the colour requested
 
-.. function:: __fd2_debug         
+.. function:: __fd2_debug(message)
+
+   Logging command (logging level
+
 .. function:: __fd2_echo   
 .. function:: __fd2_enter  
 .. function:: __fd2_error  
