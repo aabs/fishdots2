@@ -47,7 +47,7 @@ between plugins is warranted.
 ## Conventions
 
 1. All functions start with `fd2_`.  All private functions MUST start with
-`__fd2_`.
+`fd2_`.
 2. when supplying multiple strings to function in fd2, always use the colon `:`
    separator. i.e. `some_function 'hello world:a description string to be passed
    through'`.  Currently, fish will pass a list, separating on spaces, which
