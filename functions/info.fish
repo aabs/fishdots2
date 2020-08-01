@@ -1,7 +1,4 @@
 function info -d "display msg unless suppressed"
-  if test $fd2_log_level -le 1 
-    fd2_colour_print white "[info] "
-    fd2_echo "$argv"
-  end
+   __fd2_log -l 2 -c white -p info -m "$argv"
 end
  

@@ -1,7 +1,4 @@
 function warn -d "display msg unless suppressed"
-  if test $fd2_log_level -le 2 
-    fd2_colour_print yellow "[warn] "
-    fd2_echo "$argv"
-  end
+   __fd2_log -l 3 -c yellow -p warn -m "$argv"
 end
  
