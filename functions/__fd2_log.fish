@@ -1,8 +1,8 @@
 function __fd2_log -d "display a log entry"
-  set level ''
-  set colour ''
-  set prefix ''
-  set message ''
+    set level ''
+    set colour ''
+    set prefix ''
+    set message ''
 
     argparse 'l/=+' 'c/=+' 'p/=+' 'm/=+' -- $argv
 
@@ -12,7 +12,7 @@ function __fd2_log -d "display a log entry"
     else
         set level $_flag_l
     end
-    
+
     if test -z $_flag_c
         error "__fd2_log: colour must be set (use the -f option)" >&2
         return 1
@@ -33,11 +33,11 @@ function __fd2_log -d "display a log entry"
     else
         set message $_flag_m
     end
-  
-   if test $fd2_log_level -le $level 
-    fd2_colour_print $colour "[$prefix] " >&2
-    fd2_echo $message >&2
-   end
+
+    if test $fd2_log_level -le $level
+        fd2_colour_print $colour "[$prefix] " >&2
+        fd2_echo $message >&2
+    end
 end
 
 
