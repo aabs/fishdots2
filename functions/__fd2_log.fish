@@ -1,50 +1,37 @@
 function __fd2_log -d "display a log entry"
-  set -l level
-  set -l colour
-  set -l prefix
-  set -l message
-  set -l usage "
-Function __fd2_log Usage
-========================
-A general purpose log function.
+  set level ''
+  set colour ''
+  set prefix ''
+  set message ''
 
-The following options are available, all of which are mandatory.
+    argparse 'l/=+' 'c/=+' 'p/=+' 'm/=+' -- $argv
 
-    -l <num> | --level=<num>
-    -c <colour name> | --colour <colour name>
-    -p <string> | --prefix <string>
-    -m <string> | --message <string>
-
-"
-
-  getopts $argv | while read -l key value
-      switch $key
-          case l level
-              set level $value
-          case c colour color
-              set colour $value
-          case p prefix
-              set prefix $value
-          case m message
-              set message $value
-      end
-  end
-
-    if test -z $level
-        echo $usage >&2
+    if test -z $_flag_l
+        error "__fd2_log: level must be set (use the -l option)" >&2
         return 1
+    else
+        set level $_flag_l
     end
-    if test -z $colour
-        echo $usage >&2
+    
+    if test -z $_flag_c
+        error "__fd2_log: colour must be set (use the -f option)" >&2
         return 1
+    else
+        set colour $_flag_c
     end
-    if test -z $prefix
-        echo $usage >&2
+
+    if test -z $_flag_p
+        error "__fd2_log: prefix must be set (use the -p option)" >&2
         return 1
+    else
+        set prefix $_flag_p
     end
-    if test -z $message
-        echo $usage >&2
+
+    if test -z $_flag_m
+        error "__fd2_log: message must be set (use the -d option)" >&2
         return 1
+    else
+        set message $_flag_m
     end
   
    if test $fd2_log_level -le $level 
