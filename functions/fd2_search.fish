@@ -6,14 +6,14 @@ function fd2_search --argument root_path pattern -d "find file by full text sear
     argparse 'r/=+' 'p/=+' -- $argv
 
     if test -z $_flag_r
-        error "fd2_search: root_path must be set (use the -l option)" >&2
+        error "fd2_search: root_path must be set (use the -r option)" >&2
         return 1
     else
         set root_path $_flag_r
     end
 
     if test -z $_flag_p
-        error "fd2_search: pattern must be set (use the -f option)" >&2
+        error "fd2_search: pattern must be set (use the -p option)" >&2
         return 1
     else
         set pattern $_flag_p
