@@ -11,7 +11,7 @@
 ## Install
 
 ```sh
-fisher add aabs/fishdots2
+fisher install aabs/fishdots2
 ```
 
 ## Author
